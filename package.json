@@ -6,6 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,mjs}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "author": "Tse-Hsien Chiang",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "husky": "^1.1.3",
+    "lint-staged": "^8.0.4"
+  }
 }
