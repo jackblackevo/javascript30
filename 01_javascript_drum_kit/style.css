@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background: #252525 url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.keys {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.key {
+  width: 10rem;
+  flex: 0 1 auto;
+  background: rgba(0, 0, 0, 0.4);
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 0 0.125rem;
+  padding: 1rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  text-shadow: 0 0 0.5rem black;
+  transition: all 0.1s ease;
+}
+
+.key:first-child {
+  margin-left: 0;
+}
+
+.key:last-child {
+  margin-right: 0;
+}
+
+.key > kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound-name {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}

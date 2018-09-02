@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <title>01 - JavaScript Drum Kit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="keys">
+      <div class="key" data-key="65">
+        <kbd>A</kbd>
+        <span class="sound-name">clap</span>
+      </div>
+      <div class="key" data-key="83">
+        <kbd>S</kbd>
+        <span class="sound-name">hihat</span>
+      </div>
+      <div class="key" data-key="68">
+        <kbd>D</kbd>
+        <span class="sound-name">kick</span>
+      </div>
+      <div class="key" data-key="70">
+        <kbd>F</kbd>
+        <span class="sound-name">openhat</span>
+      </div>
+      <div class="key" data-key="71">
+        <kbd>G</kbd>
+        <span class="sound-name">boom</span>
+      </div>
+      <div class="key" data-key="72">
+        <kbd>H</kbd>
+        <span class="sound-name">ride</span>
+      </div>
+      <div class="key" data-key="74">
+        <kbd>J</kbd>
+        <span class="sound-name">snare</span>
+      </div>
+      <div class="key" data-key="75">
+        <kbd>K</kbd>
+        <span class="sound-name">tom</span>
+      </div>
+      <div class="key" data-key="76">
+        <kbd>L</kbd>
+        <span class="sound-name">tink</span>
+      </div>
+    </div>
+
+    <audio src="sounds/clap.wav" preload="auto" data-key="65"></audio>
+    <audio src="sounds/hihat.wav" preload="auto" data-key="83"></audio>
+    <audio src="sounds/kick.wav" preload="auto" data-key="68"></audio>
+    <audio src="sounds/openhat.wav" preload="auto" data-key="70"></audio>
+    <audio src="sounds/boom.wav" preload="auto" data-key="71"></audio>
+    <audio src="sounds/ride.wav" preload="auto" data-key="72"></audio>
+    <audio src="sounds/snare.wav" preload="auto" data-key="74"></audio>
+    <audio src="sounds/tom.wav" preload="auto" data-key="75"></audio>
+    <audio src="sounds/tink.wav" preload="auto" data-key="76"></audio>
+
+    <script type="module" src="main.mjs"></script>
+  </body>
+</html>
