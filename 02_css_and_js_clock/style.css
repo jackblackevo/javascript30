@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=50);
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 50%;
+  max-width: 30rem;
+  position: relative;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1),
+    inset 0 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.clock::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.clock {
+  border: 1.5rem solid white;
+  border-radius: 50%;
+}
+
+.clock-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 2%;
+  background: black;
+  transform-origin: 100% center;
+  transform: translateY(-50%) rotate(90deg);
+  transition: all 0.5s;
+}
+
+.hour-hand {
+  height: 3%;
+  width: 30%;
+  left: 20%;
+}
+
+.second-hand {
+  width: 55%;
+  height: 1%;
+  background: red;
+  transform-origin: 90.909091% center;
+}
