@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 50px;
+  background: #193549;
+}
+
+:root {
+  --spacing: 10px;
+  --blur-size: 10px;
+  --base-color: #ffc600;
+}
+
+body {
+  margin: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+input {
+  width: 100px;
+}
+
+.highlight {
+  color: var(--base-color);
+}
+
+.controls-panel {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.controls-panel > label {
+  margin: 0 10px;
+}
+
+.edit-panel {
+  width: 95%;
+}
+
+.edit-panel > img {
+  width: 100%;
+  padding: var(--spacing);
+  filter: blur(var(--blur-size));
+  background-color: var(--base-color);
+}
