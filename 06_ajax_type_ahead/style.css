@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffc600;
+}
+
+body {
+  margin: 0;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+form[name='search-form'] {
+  max-width: 480px;
+  width: 90%;
+  margin: 50px auto 0;
+}
+
+form[name='search-form'] [name='search-bar'] {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: 10px solid #f7f7f7;
+  border-radius: 5px;
+  font-size: 40px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), inset 0 0 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+
+.suggestions {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.suggestions > li {
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  border-bottom: 1px solid #d8d8d8;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestions > li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg);
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+}
+
+.suggestions > li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(-1px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+}
+
+.suggestions .population {
+  font-size: 0.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.suggestions .highlight {
+  background: #ffc600;
+}
