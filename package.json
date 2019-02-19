@@ -8,6 +8,8 @@
     "npm": ">= 6.4.1"
   },
   "scripts": {
+    "requirements-check": "node check_version.js",
+    "postinstall": "npm run requirements-check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
@@ -27,6 +29,9 @@
   },
   "author": "Tse-Hsien Chiang",
   "license": "ISC",
+  "dependencies": {
+    "semver": "^5.6.0"
+  },
   "devDependencies": {
     "eslint": "^5.14.0",
     "eslint-config-prettier": "^4.0.0",
