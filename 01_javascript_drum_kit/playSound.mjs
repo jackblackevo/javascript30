@@ -1,13 +1,13 @@
 const keyElementsMap = new Map(
-  [].map.call(document.querySelectorAll('div[data-key]'), element => [
-    Number(element.dataset.key),
+  [...document.querySelectorAll('div[data-key]')].map(element => [
+    Number.parseInt(element.dataset.key, 10),
     element
   ])
 );
 
 const audioElementsMap = new Map(
-  [].map.call(document.querySelectorAll('audio[data-key]'), element => [
-    Number(element.dataset.key),
+  [...document.querySelectorAll('audio[data-key]')].map(element => [
+    Number.parseInt(element.dataset.key, 10),
     element
   ])
 );
