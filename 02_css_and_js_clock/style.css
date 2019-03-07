@@ -64,5 +64,5 @@ body {
   width: 55%;
   height: 1%;
   background: red;
-  transform-origin: 90.909091% center;
+  transform-origin: calc(50 / 55 * 100%) center;
 }
