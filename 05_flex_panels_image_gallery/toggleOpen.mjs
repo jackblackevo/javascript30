@@ -6,9 +6,9 @@ const closeOtherPanels = target =>
     .map(panel => panel.classList.remove('open'));
 
 const toggleOpen = event => {
-  const { path, currentTarget } = event;
+  const path = event.composedPath();
 
-  const targetPanelIdx = [...path].indexOf(currentTarget) - 1;
+  const targetPanelIdx = path.indexOf(event.currentTarget) - 1;
   const targetPanel = path[targetPanelIdx];
 
   closeOtherPanels(targetPanel);
