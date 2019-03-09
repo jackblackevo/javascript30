@@ -26,7 +26,7 @@ searchForm.elements['search-bar'].addEventListener(
     const regexp = new RegExp(escapedUserInput, 'gi');
 
     const highlightSpan = document.createElement('span');
-    highlightSpan.className = 'highlight';
+    highlightSpan.classList.add('highlight');
     highlightSpan.append(trimmedUserInput);
 
     const liNodes = cities
@@ -42,11 +42,11 @@ searchForm.elements['search-bar'].addEventListener(
           }, []);
 
         const nameSpan = document.createElement('span');
-        nameSpan.className = 'name';
+        nameSpan.classList.add('name');
         nameSpan.append(...cityStateNodes);
 
         const populationSpan = document.createElement('span');
-        populationSpan.className = 'population';
+        populationSpan.classList.add('population');
         populationSpan.append(
           Number.parseInt(place.population, 10).toLocaleString()
         );
