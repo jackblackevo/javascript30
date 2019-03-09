@@ -7,21 +7,25 @@ const secondHand = document.querySelector('.second-hand');
 const updateHandPosition = (handElement, degreeDiff) => {
   if (handElement.dataset.degree === '90') {
     const { transition: transitionStyle } = getComputedStyle(handElement);
-    handElement.style.transition = 'unset';
-    handElement.style.transform = 'translateY(-50%) rotate(90deg)';
+    handElement.style.setProperty('transition', 'unset');
+    handElement.style.setProperty(
+      'transform',
+      'translateY(-50%) rotate(90deg)'
+    );
     void handElement.offsetTop;
-    handElement.style.transition = transitionStyle;
+    handElement.style.setProperty('transition', transitionStyle);
   }
 
   const nextDegree = 90 + degreeDiff;
   handElement.dataset.degree = nextDegree;
-  handElement.style.transform =
+  handElement.style.setProperty(
+    'transform',
     nextDegree === 90
       ? `translateY(-50%) rotate(${nextDegree + 360}deg)`
-      : (handElement.style.transform = `translateY(-50%) rotate(${nextDegree}deg)`);
+      : `translateY(-50%) rotate(${nextDegree}deg)`
+  );
 };
 
-let timerID = 0;
 const updateClock = () => {
   const { hour, min, second } = getTimes();
   updateHandPosition(hourHand, (hour / 12) * 360);
@@ -29,6 +33,7 @@ const updateClock = () => {
   updateHandPosition(secondHand, (second / 60) * 360);
 };
 
+let timerID = 0;
 const startClock = () => {
   stopClock();
   timerID = setInterval(updateClock, 1000);
