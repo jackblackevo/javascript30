@@ -1,4 +1,4 @@
-const removeTransition = event => {
+const removePlaying = event => {
   const { propertyName, target } = event;
 
   if (propertyName === 'transform') {
@@ -6,4 +6,4 @@ const removeTransition = event => {
   }
 };
 
-export default removeTransition;
+export default removePlaying;
