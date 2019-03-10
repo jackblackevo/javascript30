@@ -31,7 +31,7 @@ const updateHandPosition = (handElement, degreeDiff) => {
 
 const updateClock = () => {
   const { hour, min, second } = getTimes();
-  updateHandPosition(hourHand, (hour / 12) * 360);
+  updateHandPosition(hourHand, (hour / 24) * 360);
   updateHandPosition(minHand, (min / 60) * 360);
   updateHandPosition(secondHand, (second / 60) * 360);
 };
