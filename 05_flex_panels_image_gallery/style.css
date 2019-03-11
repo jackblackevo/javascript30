@@ -1,11 +1,14 @@
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 html {
   font-size: 20px;
   background: #ffc600;
+}
+
+body {
+  margin: 0;
 }
 
 .panels {
