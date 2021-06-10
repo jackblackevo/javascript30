@@ -1,11 +1,11 @@
 const allPanels = Array.from(document.querySelectorAll('.panel'));
 
-const closeOtherPanels = target =>
+const closeOtherPanels = (target) =>
   allPanels
-    .filter(panel => panel !== target)
-    .map(panel => panel.classList.remove('open'));
+    .filter((panel) => panel !== target)
+    .map((panel) => panel.classList.remove('open'));
 
-const toggleOpen = event => {
+const toggleOpen = (event) => {
   const path = event.composedPath();
 
   const targetPanelIdx = path.indexOf(event.currentTarget) - 1;

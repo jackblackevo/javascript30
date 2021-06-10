@@ -4,7 +4,7 @@ const getTimes = () => {
   return {
     hour: date.getHours(),
     min: date.getMinutes(),
-    second: date.getSeconds()
+    second: date.getSeconds(),
   };
 };
 

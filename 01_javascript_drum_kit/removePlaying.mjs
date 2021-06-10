@@ -1,4 +1,4 @@
-const removePlaying = event => {
+const removePlaying = (event) => {
   const { propertyName, target } = event;
 
   if (propertyName === 'transform') {
