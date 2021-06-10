@@ -13,14 +13,8 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,mjs}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{js,mjs,json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,mjs}": "eslint --fix",
+    "*.{js,mjs,json,css,md}": "prettier --write"
   },
   "author": "Tse-Hsien Chiang",
   "license": "ISC",
