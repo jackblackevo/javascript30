@@ -1,4 +1,4 @@
-const updateCSSVariable = event => {
+const updateCSSVariable = (event) => {
   const { name: variableName, value } = event.target;
   const suffix = event.target.dataset.unit || '';
 

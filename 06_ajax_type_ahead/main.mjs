@@ -16,7 +16,7 @@ let cities = [];
 const searchForm = document.forms['search-form'];
 searchForm.elements['search-bar'].addEventListener(
   'input',
-  debounce(event => {
+  debounce((event) => {
     const trimmedUserInput = event.target.value.trim();
 
     const escapedUserInput = trimmedUserInput.replace(
@@ -30,7 +30,7 @@ searchForm.elements['search-bar'].addEventListener(
     highlightSpan.append(trimmedUserInput);
 
     const liNodes = cities
-      .filter(place => place.city.match(regexp) || place.state.match(regexp))
+      .filter((place) => place.city.match(regexp) || place.state.match(regexp))
       .reduce((result, place) => {
         const cityStateNodes = `${place.city}, ${place.state}`
           .split(regexp)

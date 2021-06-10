@@ -16,7 +16,7 @@ const inventors = [
   { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
   { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
   { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
-  { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+  { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 },
 ];
 
 const people = [
@@ -60,7 +60,7 @@ const people = [
   'Black, Elk',
   'Blair, Robert',
   'Blair, Tony',
-  'Blake, William'
+  'Blake, William',
 ];
 
 // Array.prototype.filter()
@@ -100,15 +100,15 @@ console.table(oldest);
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
-document.querySelector('iframe').addEventListener('load', event => {
+document.querySelector('iframe').addEventListener('load', (event) => {
   // Can not access iframe's document object, because CORS
   // DOMException: Blocked a frame with origin "http://127.0.0.1:5500" from accessing a cross-origin frame.
   try {
     const wikiPageDocument = event.target.contentWindow.document;
     const categoryLinks = wikiPageDocument.querySelectorAll('.mw-category a');
     const de = [...categoryLinks]
-      .map(link => link.textContent)
-      .filter(streetName => streetName.includes('de'));
+      .map((link) => link.textContent)
+      .filter((streetName) => streetName.includes('de'));
 
     console.table(de);
   } catch (error) {
@@ -143,13 +143,13 @@ const data = [
   'van',
   'car',
   'truck',
-  'pogostick'
+  'pogostick',
 ];
 
 const transportation = data.reduce(
   (result, item) => ({
     ...result,
-    [item]: (result[item] || 0) + 1
+    [item]: (result[item] || 0) + 1,
   }),
   {}
 );

@@ -1,4 +1,4 @@
-const toggleActive = event => {
+const toggleActive = (event) => {
   const { propertyName, target } = event;
 
   if (propertyName === 'flex' || propertyName === 'flex-grow') {
