@@ -9,11 +9,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,mjs}": "eslint --fix",
+    "*.{js,mjs}": "eslint --cache --fix",
     "*.{js,mjs,json,css,md}": "prettier --write"
   },
   "author": "Tse-Hsien Chiang",
