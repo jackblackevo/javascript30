@@ -28,7 +28,7 @@
   "author": "Tse-Hsien Chiang",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.28.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^3.1.0",
